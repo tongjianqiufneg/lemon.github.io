@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "simkai";
+            src: url('fonts/SIMKAI.TTF');
+        }
+
+        .ms {
+            letter-spacing: 10px;
+            width: 320px;
+            height: 60px;
+            border: 5px dotted gray;
+            line-height: 60px;
+            text-align: center;
+            margin: 10px auto;
+            text-decoration: underline;
+            text-shadow: 2px 2px gray;
+            font-size: 400%;
+
+        }
+
+        .one {
+            text-indent: 60px;
+        }
+
+        .two {
+            text-indent: 40px;
+        }
+
+        .three {
+            text-indent: 20px;
+        }
+
+        h3 {
+            /* block 块级元素，独占整行 默认
+            inline-block 内联的块级元素，不独占整行
+            none 不显示*/
+            /* visibility: hidden; 隐藏文字并占用空间 */
+            display: inline-block;
+            text-transform: uppercase;
+            font-family: 'simkai';
+            font-stretch: condensed;
+            font-style: oblique;
+            font-size: 2cm;
+        }
+
+        #adv {
+            /*
+            position属性的取值
+            1.static 静态定位 正常的文档流
+            2.relative 相对定位 相对于原来正常的位置
+            3.absolute 绝对定位 相对于父元素来设置位置
+            4.fixed 固定定位 相对于浏览器窗口来设置位置
+             */
+            width: 200px;
+            height: 200px;
+            color: yellow;
+            background-color: blue;
+            /* float: right; */
+            position: fixed;
+            top: 400px;
+            right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="adv">此广告位招租
+        <button id="closeBtn" style="float: right;">关闭</button>
+    </div>
+    <img src="images/zabbix.jpg" alt="">
+    <h3>Hello,World!你好世界</h3>
+    <h1 class="ms">静夜思</h1>
+    <hr>
+    <div>
+        <p class="one">床前明月光</p>
+        <p class="two">疑是地上霜</p>
+        <p class="three">举头望明月</p>
+        <p>低头思故乡</p>
+    </div>
+    <script>
+        var closeBtn = document.getElementById('closeBtn')
+            closeBtn.addEventListener('click', function () {
+            var advDiv = document.getElementById('adv')
+            advDiv.style.display = 'none'
+        })
+    </script>
+</body>
+
+</html>
